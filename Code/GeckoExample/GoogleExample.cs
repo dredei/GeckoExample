@@ -11,7 +11,7 @@ using Gecko;
 
 #region Copyright
 
-// Пример к уроку: 
+// Пример к статье: http://www.softez.pp.ua/2014/01/28/gecko-%d0%b8-csharp-geckofx/
 // Автор: dredei
 
 #endregion
@@ -116,13 +116,16 @@ namespace GeckoExample
             await this.WaitForLoading();
         }
 
+        /// <summary>
+        /// Эмулирует нажатие на случайной ссылке
+        /// </summary>
         public async Task ClickRandomLink()
         {
             // получаем все элементы с тегом input
-            var inputsElements = this._webBrowser.Document.GetElementsByTagName( "a" ).ToList();
+            var aElements = this._webBrowser.Document.GetElementsByTagName( "a" ).ToList();
             // получаем все ссылки, у которых значение атрибута "onmousedown" начинается с "return rwt("
             List<GeckoHtmlElement> needleLinks = new List<GeckoHtmlElement>();
-            foreach ( var element in inputsElements )
+            foreach ( var element in aElements )
             {
                 try
                 {

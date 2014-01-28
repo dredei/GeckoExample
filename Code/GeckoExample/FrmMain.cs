@@ -8,7 +8,7 @@ using Gecko;
 
 #region Copyright
 
-// Пример к уроку: 
+// Пример к статье: http://www.softez.pp.ua/2014/01/28/gecko-%d0%b8-csharp-geckofx/
 // Автор: dredei
 
 #endregion
